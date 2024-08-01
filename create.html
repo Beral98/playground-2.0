@@ -1,26 +1,144 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Adicionar</title>
+    <title>Tabela de Clientes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4a90e2;
+            color: #fff;
+            font-weight: 600;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #e0f7fa;
+        }
+
+        td {
+            color: #555;
+        }
+
+        h2 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #4a90e2;
+            padding-bottom: 10px;
+        }
+
+        /* Adicional: Cores dos headers das tabelas */
+        thead {
+            background-color: #00796b;
+            color: white;
+        }
+
+        tbody tr:nth-child(odd) {
+            background-color: #e0f2f1;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #b2dfdb;
+        }
+
+        /* Estilo das células */
+        td {
+            font-size: 16px;
+            font-weight: 500;
+        }
+
+        /* Adicional: Bordas arredondadas e efeitos */
+        table {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        td, th {
+            border: none;
+        }
+        
+        th {
+            border-bottom: 2px solid #004d40;
+        }
+
+        td {
+            border-bottom: 1px solid #004d40;
+        }
+    </style>
 </head>
 <body>
-    <h1>Adicionar Produto</h1>
 
-<form action="{{ url('/catalog') }}" method="post">
-    <label for="nome">Nome:</label>
-    <input type="text" name="nome" id="nome">
+<h2>Tabela de Clientes</h2>
 
-    <label for="marca">Marca:</label>
-    <input type="text" name="marca" id="marca">
+<table>
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th>CNPJ</th>
+            <th>Cliente</th>
+            <th>CEP</th>
+            <th>Rua</th>
+            <th>Honorário</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>00.000.000/0001-00</td>
+            <td>Empresa Exemplo</td>
+            <td>93125-250</td>
+            <td>Ipiranga, 717</td>
+            <td>R$ 5.000,00</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>11.111.111/0001-11</td>
+            <td>Outra Empresa</td>
+            <td>93010-180</td>
+            <td>José Bonifacio, 553</td>
+            <td>R$ 3.500,00</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>11.111.111/0001-11</td>
+            <td>Outra Empresa</td>
+            <td>93010-180</td>
+            <td>José Bonifacio, 553</td>
+            <td>R$ 3.500,00</td>
+        </tr>
+        <!-- Adicione mais linhas conforme necessário -->
+    </tbody>
+</table>
 
-    <label for="modelo">Modelo:</label>
-    <input type="text" name="modelo" id="modelo">
+<button type="submit" onclick="redirectAfterLogin(event)">Adicionar</button>
+<button type="submit" onclick="">Excluir</button>
 
-    <button type="submit">Salvar</button>
-</form>
 </body>
 </html>
-

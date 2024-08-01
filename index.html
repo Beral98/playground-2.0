@@ -32,15 +32,14 @@
 
 <script>
     function redirectAfterLogin(event) {
-        event.preventDefault(); // Prevent form submission for demonstration
+        event.preventDefault();
 
-        // Simulate a login process
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
         if (email === 'test@example.com' && password === 'password123') {
-            // Redirect to the edit pag (adjust the URL as necessary)
-            window.location.href = '/create.html'; // Replace with the actual URL for the edit page
+            
+            window.location.href = '/create.html'; 
         } else {
             alert('Invalid login credentials');
         }
@@ -74,7 +73,7 @@
             </div>
         </div>
     </div>
-    <div class="last">Vitrine Store - 2024</div>
+    <div class="last">Leão Contabilidade - 2024</div>
 </footer>
 </body>
 </html>
